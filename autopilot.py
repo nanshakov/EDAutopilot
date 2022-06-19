@@ -5,6 +5,7 @@ import tkinter as tk
 from tkinter import messagebox
 import webbrowser
 
+
 def update():
     releases_url = 'https://api.github.com/repos/skai2/EDAutopilot/releases'
     response = requests.get(releases_url)
@@ -25,6 +26,7 @@ def update():
             webbrowser.open_new(data[0]['html_url'])
             return True
     return False
+
 
 if __name__ == '__main__':
     if not update():
